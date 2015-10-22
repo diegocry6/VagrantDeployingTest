@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/trusty64"
   config.vm.network :forwarded_port, guest: 80, host: 8888
-  config.vm.provision :shell, privileged: false, path: "scripts/bootstrap.sh"
+  config.vm.provision :shell, privileged: true, path: "script_inst.sh"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
