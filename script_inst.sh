@@ -1,14 +1,13 @@
 
-#Instalacion MONGODB
+#Actualizacion Repo
 
-aptitude update
-apt-get update
-aptitude install mongodb
+sudo apt-get update
 
-#Instalacion Express
+#Instalacion NPM, express y modulos
 
-apt-get install express
+sudo apt-get install npm -y
+sudo npm install -g express
+sudo npm install mongodb
+sudo npm install nodejs
 
-#Instalacion node.js
 
-apt-get install node
