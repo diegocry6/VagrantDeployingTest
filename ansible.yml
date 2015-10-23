@@ -1,0 +1,22 @@
+---
+- hosts: all
+  sudo: true
+  tasks:
+  - name: Node.js | Añadir al Repo
+    apt_repository: repo=ppa:chris-lea/node.js
+    tags: nodejs
+
+  - name: NPM | Instalar NPM
+    apt: pkg=npm update_cache=yes
+    tags: npm
+	
+  - name: Node.js | Instalar nodejs y npm
+    apt: pkg=nodejs update_cache=yes
+    tags: nodejs
+
+  - name: Node.js | Instalar Modulos de Node
+    command: npm install -g $item
+    with_items:
+      - mongodb
+      - express
+      - nodejs
