@@ -8,11 +8,10 @@ FILE='mktemp';
 wget "$URL" -qO $FILE && dpkg -i $FILE;
 rm $FILE
 
-#Compilacion de Cabeceras 
+#Archivos para compilacion posterior
 
 apt-get update 
 apt-get install build-essential -y
-apt-get install linux-headers-$(uname -r) -y 
 apt-get -f install -y
 
 
@@ -24,8 +23,9 @@ apt-get install vagrant -y
 
 apt-get install git -y
 
-#Instalacion de dependencias 
+#Instalacion de dependencias y Cabeceras
 
+apt-get install linux-headers-$(uname -r) -y 
 apt-get -f install -y
 
 #Clonacion desde GITHUB 
