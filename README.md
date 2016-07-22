@@ -1,3 +1,5 @@
-# VagrantServicios
+# Vagrant Deploying Test
 
-Practica Vagrant Servicios con CHEF
+Vagrant Dynamic Deploying System
+
+ONLY TESTING DEPLOYING METHODS , NOT FOR PROFESSIONAL USE.
